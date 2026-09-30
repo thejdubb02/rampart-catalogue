@@ -1,0 +1,14 @@
+{
+  "name": "Plum",
+  "dark": true,
+  "background": "#160E18",
+  "surface": "#221628",
+  "surfaceVariant": "#2E1E36",
+  "selection": "#3A2444",
+  "text": "#F8EEF6",
+  "muted": "#C0A4BC",
+  "line": "#3A2842",
+  "accent": "#FF7EB6",
+  "onAccent": "#000000",
+  "description": "Aubergine surfaces with a pink accent."
+}

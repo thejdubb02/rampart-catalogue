@@ -1,0 +1,14 @@
+{
+  "name": "Ember",
+  "dark": true,
+  "background": "#1A100C",
+  "surface": "#261812",
+  "surfaceVariant": "#34241C",
+  "selection": "#3E2818",
+  "text": "#F8EEE6",
+  "muted": "#C0A090",
+  "line": "#3E2C24",
+  "accent": "#FF8C38",
+  "onAccent": "#000000",
+  "description": "Warm brown-black surfaces with an orange accent."
+}

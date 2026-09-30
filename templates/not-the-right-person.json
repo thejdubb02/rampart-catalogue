@@ -1,0 +1,6 @@
+{
+  "name": "Not the right person",
+  "subject": "Passing this to the right person",
+  "body": "Hello {{first name}},\n\nThank you for writing about {{subject}}. I am not the right person for this, so I am forwarding it to the person who handles it.\n\nI have asked them to reply to you at {{email}}. If you do not hear back, send a nudge and I will chase it.",
+  "description": "Says this reached the wrong person and points it onward."
+}

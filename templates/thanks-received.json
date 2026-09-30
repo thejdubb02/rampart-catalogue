@@ -1,0 +1,6 @@
+{
+  "name": "Thanks received",
+  "subject": "Got it, thank you",
+  "body": "Hello {{first name}},\n\nThank you for sending this over. I have it, and I will come back to you on {{subject}} once I have had a proper look.\n\nI appreciate you taking the time.",
+  "description": "Lets someone know you received what they sent."
+}

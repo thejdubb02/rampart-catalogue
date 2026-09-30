@@ -1,0 +1,25 @@
+{
+  "name": "Harbour Fog",
+  "dark": true,
+  "background": "#161E28",
+  "surface": "#1E2834",
+  "surfaceVariant": "#2A3644",
+  "selection": "#1E3A52",
+  "text": "#E8EEF4",
+  "muted": "#9AADC0",
+  "line": "#324050",
+  "accent": "#6CB4F0",
+  "onAccent": "#000000",
+  "description": "Steel-blue window chrome with a fog-grey reading page.",
+  "page": {
+    "background": "#E6EBEF",
+    "surface": "#F4F7F8",
+    "surfaceVariant": "#D5DEE6",
+    "selection": "#D0E2F2",
+    "text": "#1A222A",
+    "muted": "#4E5C68",
+    "line": "#C5D0DA",
+    "accent": "#0E4E90",
+    "onAccent": "#FFFFFF"
+  }
+}

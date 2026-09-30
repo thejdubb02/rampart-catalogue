@@ -1,0 +1,14 @@
+{
+  "name": "Glacier",
+  "dark": false,
+  "background": "#F2F6FA",
+  "surface": "#FBFCFE",
+  "surfaceVariant": "#E1EAF3",
+  "selection": "#D4E4F5",
+  "text": "#1A2430",
+  "muted": "#526070",
+  "line": "#D3DEE9",
+  "accent": "#0C4A8A",
+  "onAccent": "#FFFFFF",
+  "description": "Cool white and pale blue surfaces with a deep blue accent."
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Graphite",
+  "dark": true,
+  "background": "#1A1A1A",
+  "surface": "#242424",
+  "surfaceVariant": "#2E2E2E",
+  "selection": "#3A3224",
+  "text": "#F2F2F2",
+  "muted": "#ABABAB",
+  "line": "#383838",
+  "accent": "#E8B040",
+  "onAccent": "#000000",
+  "description": "Neutral charcoal surfaces with an amber accent."
+}

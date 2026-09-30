@@ -1,0 +1,14 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m unittest discover tools
+      - run: python3 tools/build_index.py
+      - run: git diff --exit-code index.json

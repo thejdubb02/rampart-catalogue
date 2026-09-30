@@ -1,0 +1,14 @@
+{
+  "name": "Deep Sea",
+  "dark": true,
+  "background": "#0B141C",
+  "surface": "#12202C",
+  "surfaceVariant": "#1A2C3C",
+  "selection": "#16344A",
+  "text": "#E6F1F8",
+  "muted": "#95AEC2",
+  "line": "#234054",
+  "accent": "#4FD0E4",
+  "onAccent": "#000000",
+  "description": "Blue-black surfaces with a cyan accent."
+}

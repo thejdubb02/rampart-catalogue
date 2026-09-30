@@ -1,0 +1,6 @@
+{
+  "name": "Introduce two people",
+  "subject": "An introduction",
+  "body": "Hello {{first name}},\n\nI wanted to introduce you both in one note. {{subject}} is the overlap, and I think you will get further talking with each other than waiting on {{me}} to relay it.\n\nI will leave you to take it from here.",
+  "description": "Introduces two people and then steps out of the way."
+}

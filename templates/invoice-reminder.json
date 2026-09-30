@@ -1,0 +1,6 @@
+{
+  "name": "Invoice reminder",
+  "subject": "A reminder on an open invoice",
+  "body": "Hello {{first name}},\n\nI hope you are well. This is a gentle reminder that the invoice I sent about {{subject}} still looks unpaid from my side.\n\nIf you have already taken care of it, please ignore this note. If anything is missing or unclear, reply and I will sort it out.",
+  "description": "A polite reminder that an invoice is still open."
+}

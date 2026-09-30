@@ -1,0 +1,25 @@
+{
+  "name": "Espresso Cream",
+  "dark": true,
+  "background": "#1A120E",
+  "surface": "#261C16",
+  "surfaceVariant": "#342820",
+  "selection": "#3A2A1C",
+  "text": "#F6EEE6",
+  "muted": "#C4AA96",
+  "line": "#403228",
+  "accent": "#E8A85C",
+  "onAccent": "#000000",
+  "description": "Dark coffee window chrome with a cream reading page.",
+  "page": {
+    "background": "#FBF4EA",
+    "surface": "#FFFBF5",
+    "surfaceVariant": "#F0E4D2",
+    "selection": "#F3DDB8",
+    "text": "#2A2118",
+    "muted": "#6A5848",
+    "line": "#E4D4C0",
+    "accent": "#8F4E12",
+    "onAccent": "#FFFFFF"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Follow up",
+  "subject": "Following up",
+  "body": "Hello {{first name}},\n\nI am writing to follow up on {{subject}}. I would be glad to hear where things stand when you have a moment.\n\nHappy to clarify anything that would make a reply easier.",
+  "description": "A nudge on something you sent that has gone quiet."
+}

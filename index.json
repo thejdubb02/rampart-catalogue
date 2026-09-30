@@ -1,0 +1,319 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "kind": "template",
+      "id": "decline-politely",
+      "name": "Decline politely",
+      "description": "Turns something down without leaving the other person hanging.",
+      "author": "Rampart",
+      "path": "templates/decline-politely.json",
+      "size": 379,
+      "sha256": "d1aa122cb03bd355a38de04de261c056a637ae19b0d95004f87cee2135e9b93f",
+      "preview": {
+        "subject": "I need to pass on this",
+        "firstLine": "Hello {{first name}},"
+      }
+    },
+    {
+      "kind": "template",
+      "id": "follow-up",
+      "name": "Follow up",
+      "description": "A nudge on something you sent that has gone quiet.",
+      "author": "Rampart",
+      "path": "templates/follow-up.json",
+      "size": 334,
+      "sha256": "4c058668a34629b8abc162d79e534408b8fe251ec6fd0aa7efa4bef50d7d663b",
+      "preview": {
+        "subject": "Following up",
+        "firstLine": "Hello {{first name}},"
+      }
+    },
+    {
+      "kind": "template",
+      "id": "intro-two-people",
+      "name": "Introduce two people",
+      "description": "Introduces two people and then steps out of the way.",
+      "author": "Rampart",
+      "path": "templates/intro-two-people.json",
+      "size": 387,
+      "sha256": "2824d62be7bd72115b8bbcd4a8fd65384454c8a1ffb77327b17df4376642c39e",
+      "preview": {
+        "subject": "An introduction",
+        "firstLine": "Hello {{first name}},"
+      }
+    },
+    {
+      "kind": "template",
+      "id": "invoice-reminder",
+      "name": "Invoice reminder",
+      "description": "A polite reminder that an invoice is still open.",
+      "author": "Rampart",
+      "path": "templates/invoice-reminder.json",
+      "size": 439,
+      "sha256": "2c2e79c6d9d585f4725bca0f47e33d2abcd92b7943a504f052c45d90ce65c47f",
+      "preview": {
+        "subject": "A reminder on an open invoice",
+        "firstLine": "Hello {{first name}},"
+      }
+    },
+    {
+      "kind": "template",
+      "id": "meeting-request",
+      "name": "Meeting request",
+      "description": "Asks for a short meeting and leaves the time open.",
+      "author": "Rampart",
+      "path": "templates/meeting-request.json",
+      "size": 380,
+      "sha256": "7e5cfecad3781c514c8b986aa37d3692c7017f5befc74bc96ca331cbee688f6f",
+      "preview": {
+        "subject": "Time for a short meeting",
+        "firstLine": "Hello {{first name}},"
+      }
+    },
+    {
+      "kind": "template",
+      "id": "not-the-right-person",
+      "name": "Not the right person",
+      "description": "Says this reached the wrong person and points it onward.",
+      "author": "Rampart",
+      "path": "templates/not-the-right-person.json",
+      "size": 440,
+      "sha256": "4abed0a4b6e6b35e5abb1cbe66271cf249cdf5907e49226a9a7fc7025721188c",
+      "preview": {
+        "subject": "Passing this to the right person",
+        "firstLine": "Hello {{first name}},"
+      }
+    },
+    {
+      "kind": "template",
+      "id": "out-of-office",
+      "name": "Out of office",
+      "description": "Says you are away and will reply when you are back.",
+      "author": "Rampart",
+      "path": "templates/out-of-office.json",
+      "size": 344,
+      "sha256": "c24b5dfcb58b6ef90ab6074dfe6e9e8e8e86ee7f8df051e800574d2bd6af7d20",
+      "preview": {
+        "subject": "Out of office",
+        "firstLine": "Hello {{first name}},"
+      }
+    },
+    {
+      "kind": "template",
+      "id": "thanks-received",
+      "name": "Thanks received",
+      "description": "Lets someone know you received what they sent.",
+      "author": "Rampart",
+      "path": "templates/thanks-received.json",
+      "size": 326,
+      "sha256": "e4ea92fad6446289cc079781d20fdc403d24431088b803f4bdb6736c5f8bcfa8",
+      "preview": {
+        "subject": "Got it, thank you",
+        "firstLine": "Hello {{first name}},"
+      }
+    },
+    {
+      "kind": "theme",
+      "id": "charcoal-rose",
+      "name": "Charcoal Rose",
+      "description": "Charcoal window chrome with a blush-white reading page.",
+      "author": "Rampart",
+      "path": "themes/charcoal-rose.json",
+      "size": 596,
+      "sha256": "c52b72baf5faeda6ed1b715ce65ff56c75cd3dd22ee347d53a65ed2fd8bf08f9",
+      "preview": {
+        "dark": true,
+        "background": "#1C1C1C",
+        "surface": "#262626",
+        "text": "#F2F2F2",
+        "accent": "#FF7A9A",
+        "page": {
+          "background": "#FBF5F5",
+          "text": "#261C1E",
+          "accent": "#B4234A"
+        }
+      }
+    },
+    {
+      "kind": "theme",
+      "id": "deep-sea",
+      "name": "Deep Sea",
+      "description": "Blue-black surfaces with a cyan accent.",
+      "author": "Rampart",
+      "path": "themes/deep-sea.json",
+      "size": 321,
+      "sha256": "d7e8d72b2f613045976c60f99e5535df4e937afa1568ad034b4a4ff049176b93",
+      "preview": {
+        "dark": true,
+        "background": "#0B141C",
+        "surface": "#12202C",
+        "text": "#E6F1F8",
+        "accent": "#4FD0E4"
+      }
+    },
+    {
+      "kind": "theme",
+      "id": "ember",
+      "name": "Ember",
+      "description": "Warm brown-black surfaces with an orange accent.",
+      "author": "Rampart",
+      "path": "themes/ember.json",
+      "size": 327,
+      "sha256": "6b33c8cc8ea5f046254f162fde7bc0592cb01155da527312c5f08a88aaf6e16a",
+      "preview": {
+        "dark": true,
+        "background": "#1A100C",
+        "surface": "#261812",
+        "text": "#F8EEE6",
+        "accent": "#FF8C38"
+      }
+    },
+    {
+      "kind": "theme",
+      "id": "espresso-cream",
+      "name": "Espresso Cream",
+      "description": "Dark coffee window chrome with a cream reading page.",
+      "author": "Rampart",
+      "path": "themes/espresso-cream.json",
+      "size": 594,
+      "sha256": "12bee0b309d34ec9f21911ca4d73ff36b478397e8d598eaf47dfe84eba530b89",
+      "preview": {
+        "dark": true,
+        "background": "#1A120E",
+        "surface": "#261C16",
+        "text": "#F6EEE6",
+        "accent": "#E8A85C",
+        "page": {
+          "background": "#FBF4EA",
+          "text": "#2A2118",
+          "accent": "#8F4E12"
+        }
+      }
+    },
+    {
+      "kind": "theme",
+      "id": "glacier",
+      "name": "Glacier",
+      "description": "Cool white and pale blue surfaces with a deep blue accent.",
+      "author": "Rampart",
+      "path": "themes/glacier.json",
+      "size": 340,
+      "sha256": "e96695dace09275a3f1b65bd50a49d4993ab1e2f33e07740ef84d830ea359235",
+      "preview": {
+        "dark": false,
+        "background": "#F2F6FA",
+        "surface": "#FBFCFE",
+        "text": "#1A2430",
+        "accent": "#0C4A8A"
+      }
+    },
+    {
+      "kind": "theme",
+      "id": "graphite",
+      "name": "Graphite",
+      "description": "Neutral charcoal surfaces with an amber accent.",
+      "author": "Rampart",
+      "path": "themes/graphite.json",
+      "size": 329,
+      "sha256": "3506b3e59925e5f9207f61df9f84caa036c4fbb50ce3328669d4e9eafddd0215",
+      "preview": {
+        "dark": true,
+        "background": "#1A1A1A",
+        "surface": "#242424",
+        "text": "#F2F2F2",
+        "accent": "#E8B040"
+      }
+    },
+    {
+      "kind": "theme",
+      "id": "harbour-fog",
+      "name": "Harbour Fog",
+      "description": "Steel-blue window chrome with a fog-grey reading page.",
+      "author": "Rampart",
+      "path": "themes/harbour-fog.json",
+      "size": 593,
+      "sha256": "b23fdc0820a3c778e7722184a295ec639b13ca26eb45860498668d637b2a198a",
+      "preview": {
+        "dark": true,
+        "background": "#161E28",
+        "surface": "#1E2834",
+        "text": "#E8EEF4",
+        "accent": "#6CB4F0",
+        "page": {
+          "background": "#E6EBEF",
+          "text": "#1A222A",
+          "accent": "#0E4E90"
+        }
+      }
+    },
+    {
+      "kind": "theme",
+      "id": "lavender-mist",
+      "name": "Lavender Mist",
+      "description": "Pale lilac surfaces with a violet accent.",
+      "author": "Rampart",
+      "path": "themes/lavender-mist.json",
+      "size": 329,
+      "sha256": "55897c8f31b00191fb2dd0a1a188edf99c78d5728fe30a07b5d7ef6da3a5c748",
+      "preview": {
+        "dark": false,
+        "background": "#F5F3F9",
+        "surface": "#FBFAFD",
+        "text": "#241E2E",
+        "accent": "#5B2D9A"
+      }
+    },
+    {
+      "kind": "theme",
+      "id": "plum",
+      "name": "Plum",
+      "description": "Aubergine surfaces with a pink accent.",
+      "author": "Rampart",
+      "path": "themes/plum.json",
+      "size": 316,
+      "sha256": "5c0240ec442b9490bf7e2dc5ac3c5d9f8c4a493d65f79841836eb49be0fb7aa4",
+      "preview": {
+        "dark": true,
+        "background": "#160E18",
+        "surface": "#221628",
+        "text": "#F8EEF6",
+        "accent": "#FF7EB6"
+      }
+    },
+    {
+      "kind": "theme",
+      "id": "sage",
+      "name": "Sage",
+      "description": "Soft green-grey surfaces with a green accent.",
+      "author": "Rampart",
+      "path": "themes/sage.json",
+      "size": 324,
+      "sha256": "6c6135caedd7659877679de090f705818770bf267f236fe1a23ce362be90c089",
+      "preview": {
+        "dark": false,
+        "background": "#F1F5F0",
+        "surface": "#F8FBF7",
+        "text": "#1C2820",
+        "accent": "#1E6B3C"
+      }
+    },
+    {
+      "kind": "theme",
+      "id": "sandstone",
+      "name": "Sandstone",
+      "description": "Warm beige surfaces with a terracotta accent.",
+      "author": "Rampart",
+      "path": "themes/sandstone.json",
+      "size": 329,
+      "sha256": "7d1bb3692e2b79fc111a3de964799ea05ad6ac64fcc722e38c05c8bfd2ee0993",
+      "preview": {
+        "dark": false,
+        "background": "#F4EDE3",
+        "surface": "#FBF7F2",
+        "text": "#2A2118",
+        "accent": "#A63C1A"
+      }
+    }
+  ]
+}

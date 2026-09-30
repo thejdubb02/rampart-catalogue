@@ -1,0 +1,14 @@
+{
+  "name": "Sage",
+  "dark": false,
+  "background": "#F1F5F0",
+  "surface": "#F8FBF7",
+  "surfaceVariant": "#E0E8DE",
+  "selection": "#D4E6D6",
+  "text": "#1C2820",
+  "muted": "#526056",
+  "line": "#D2DDD0",
+  "accent": "#1E6B3C",
+  "onAccent": "#FFFFFF",
+  "description": "Soft green-grey surfaces with a green accent."
+}

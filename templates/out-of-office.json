@@ -1,0 +1,6 @@
+{
+  "name": "Out of office",
+  "subject": "Out of office",
+  "body": "Hello {{first name}},\n\nThank you for your message. I am away and will reply to {{subject}} when I am back at my desk.\n\nIf it cannot wait, please send it again after I return so it is not buried.",
+  "description": "Says you are away and will reply when you are back."
+}

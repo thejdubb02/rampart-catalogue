@@ -1,0 +1,6 @@
+{
+  "name": "Meeting request",
+  "subject": "Time for a short meeting",
+  "body": "Hello {{first name}},\n\nWould you have time for a short meeting about {{subject}}? I am free most mornings this week and happy to work around your calendar.\n\nSend a time that suits you, or say if a call would be easier.",
+  "description": "Asks for a short meeting and leaves the time open."
+}

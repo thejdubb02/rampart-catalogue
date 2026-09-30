@@ -1,0 +1,14 @@
+{
+  "name": "Lavender Mist",
+  "dark": false,
+  "background": "#F5F3F9",
+  "surface": "#FBFAFD",
+  "surfaceVariant": "#E6E1F0",
+  "selection": "#DDD4F0",
+  "text": "#241E2E",
+  "muted": "#5E5670",
+  "line": "#D9D3E6",
+  "accent": "#5B2D9A",
+  "onAccent": "#FFFFFF",
+  "description": "Pale lilac surfaces with a violet accent."
+}

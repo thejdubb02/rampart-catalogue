@@ -1,0 +1,6 @@
+{
+  "name": "Decline politely",
+  "subject": "I need to pass on this",
+  "body": "Hello {{first name}},\n\nThank you for thinking of me about {{subject}}. I am not able to take this on, and I would rather say so now than leave you waiting.\n\nI hope it goes well, and I am grateful you asked.",
+  "description": "Turns something down without leaving the other person hanging."
+}

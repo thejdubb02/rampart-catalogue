@@ -1,0 +1,14 @@
+{
+  "name": "Sandstone",
+  "dark": false,
+  "background": "#F4EDE3",
+  "surface": "#FBF7F2",
+  "surfaceVariant": "#E7DDD0",
+  "selection": "#F0D9CC",
+  "text": "#2A2118",
+  "muted": "#6B5C4E",
+  "line": "#DDD1C2",
+  "accent": "#A63C1A",
+  "onAccent": "#FFFFFF",
+  "description": "Warm beige surfaces with a terracotta accent."
+}

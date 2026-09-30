@@ -1,0 +1,25 @@
+{
+  "name": "Charcoal Rose",
+  "dark": true,
+  "background": "#1C1C1C",
+  "surface": "#262626",
+  "surfaceVariant": "#323232",
+  "selection": "#3A2C30",
+  "text": "#F2F2F2",
+  "muted": "#A8A8A8",
+  "line": "#3C3C3C",
+  "accent": "#FF7A9A",
+  "onAccent": "#000000",
+  "description": "Charcoal window chrome with a blush-white reading page.",
+  "page": {
+    "background": "#FBF5F5",
+    "surface": "#FFFBFA",
+    "surfaceVariant": "#F3E4E4",
+    "selection": "#F6D6DE",
+    "text": "#261C1E",
+    "muted": "#6E585C",
+    "line": "#E8D4D6",
+    "accent": "#B4234A",
+    "onAccent": "#FFFFFF"
+  }
+}
