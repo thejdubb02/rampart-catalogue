@@ -1,0 +1,5 @@
+{
+  "name": "List the action items",
+  "description": "Pulls out who has to do what, and by when.",
+  "text": "List the action items in this email or thread.\nFor each one give who has to do it, what it is, and the date if one is mentioned.\nIf there are none, say so in one line."
+}

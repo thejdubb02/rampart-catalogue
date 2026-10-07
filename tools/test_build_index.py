@@ -54,6 +54,7 @@ BUILTIN_LABELS = {
 LIGHT = {"sandstone", "glacier", "sage", "lavender-mist"}
 DARK = {"graphite", "deep-sea", "ember", "plum"}
 HYBRID = {"harbour-fog", "espresso-cream", "charcoal-rose"}
+PROMPTS = {"action-items", "reply-in-three-lines"}
 TEMPLATES = {
     "out-of-office",
     "follow-up",
@@ -122,17 +123,18 @@ class BuildIndexTest(unittest.TestCase):
         self.root = Path(self.tmp.name)
         (self.root / "themes").mkdir()
         (self.root / "templates").mkdir()
+        (self.root / "prompts").mkdir()
 
     def tearDown(self):
         self.tmp.cleanup()
 
     def _reset(self):
-        for folder in ("themes", "templates"):
+        for folder in ("themes", "templates", "prompts"):
             for child in (self.root / folder).iterdir():
                 child.unlink()
 
     def _write(self, kind, item_id, data):
-        folder = "themes" if kind == "theme" else "templates"
+        folder = {"theme": "themes", "template": "templates", "prompt": "prompts"}[kind]
         path = self.root / folder / f"{item_id}.json"
         # Indent 4 so the bytes are not a re-serialisation with the index renderer.
         path.write_bytes(_dump(data, indent=4))
@@ -192,6 +194,24 @@ class BuildIndexTest(unittest.TestCase):
             self.assertEqual(written, text.encode("utf-8"))
             self.assertEqual(build_index.main(self.root), 0)
         self.assertEqual((self.root / "index.json").read_bytes(), written)
+
+    def test_prompt_rules(self):
+        good = {"name": "Brief", "description": "Keep it short.", "text": "Be brief.\nThree lines at most."}
+        self._write("prompt", "brief", good)
+        item = build_index.build_index(self.root)["items"][0]
+        self.assertEqual((item["kind"], item["path"]), ("prompt", "prompts/brief.json"))
+        self.assertEqual(item["preview"], {"summary": "Be brief."})
+
+        for bad, needle in (
+            ({**good, "text": "x" * 2001}, "over the 2000 cap"),
+            ({**good, "text": "see\u200bthis"}, "text contains a character"),
+            ({**good, "name": "Go\u202eback"}, "name contains a character"),
+            ({**good, "text": "  "}, "text must be a non-empty string"),
+            ({**good, "extra": "x"}, "unknown field extra"),
+        ):
+            self._reset()
+            self._write("prompt", "brief", bad)
+            self.assertTrue(any(needle in error for error in self._errors()), (bad, needle))
 
     def test_failed_build_does_not_replace_index(self):
         self._write("theme", "ink", _theme(line="nope"))
@@ -329,6 +349,7 @@ class BuildIndexTest(unittest.TestCase):
             self.assertEqual(_terminator_count(item["description"]), 1)
             self.assertNotIn(item["id"], BUILTIN_KEYS)
             self.assertNotIn(item["name"].lower(), BUILTIN_LABELS)
+        self.assertEqual(kinds["prompt"], PROMPTS)
         self.assertEqual(kinds["template"], TEMPLATES)
         self.assertEqual(kinds["theme"], LIGHT | DARK | HYBRID)
         pairs = [(item["kind"], item["id"]) for item in index["items"]]

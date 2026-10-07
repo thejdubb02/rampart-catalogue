@@ -2,6 +2,32 @@
   "version": 1,
   "items": [
     {
+      "kind": "prompt",
+      "id": "action-items",
+      "name": "List the action items",
+      "description": "Pulls out who has to do what, and by when.",
+      "author": "Rampart",
+      "path": "prompts/action-items.json",
+      "size": 284,
+      "sha256": "fb211b92e0703c3498c127fd0169db86fe2af64a8d10e8653bf27264df218f83",
+      "preview": {
+        "summary": "List the action items in this email or thread."
+      }
+    },
+    {
+      "kind": "prompt",
+      "id": "reply-in-three-lines",
+      "name": "Reply in three lines",
+      "description": "A short, polite reply that answers what was asked.",
+      "author": "Rampart",
+      "path": "prompts/reply-in-three-lines.json",
+      "size": 331,
+      "sha256": "8d0509f08bf7f54d75a3cdf58fb73c38cf14119fca8e0244adb2992990a75c8d",
+      "preview": {
+        "summary": "Write a reply to this email in three lines or fewer."
+      }
+    },
+    {
       "kind": "template",
       "id": "decline-politely",
       "name": "Decline politely",

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate themes/ and templates/ and write a deterministic index.json."""
+"""Validate themes/, templates/ and prompts/ and write a deterministic index.json."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ import hashlib
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 MAX_BYTES = 8 * 1024
@@ -30,6 +31,9 @@ THEME_COLOURS = (
 THEME_KEYS = {"name", "dark", "description", "page", *THEME_COLOURS}
 PAGE_KEYS = set(THEME_COLOURS)
 TEMPLATE_KEYS = {"name", "subject", "body", "description"}
+PROMPT_KEYS = {"name", "text", "description"}
+# Rampart's SavedPrompts.TEXT_MAX. The app refuses a longer prompt rather than cut it.
+PROMPT_TEXT_MAX = 2000
 CONTRAST_PAIRS = (
     ("text", "background", 4.5),
     ("text", "surface", 4.5),
@@ -78,7 +82,7 @@ def build_index(root: Path | str | None = None) -> dict:
     items: list[dict] = []
     seen: dict[str, str] = {}
 
-    for kind, folder in (("template", "templates"), ("theme", "themes")):
+    for kind, folder in (("prompt", "prompts"), ("template", "templates"), ("theme", "themes")):
         directory = root / folder
         if not directory.is_dir():
             errors.append(f"missing {folder}/")
@@ -116,6 +120,9 @@ def build_index(root: Path | str | None = None) -> dict:
             if kind == "theme":
                 _check_theme(data, where, file_errors)
                 preview = _theme_preview(data) if not file_errors else None
+            elif kind == "prompt":
+                _check_prompt(data, where, file_errors)
+                preview = {"summary": data["text"].strip().splitlines()[0]} if not file_errors else None
             else:
                 _check_template(data, where, file_errors)
                 preview = _template_preview(data) if not file_errors else None
@@ -237,6 +244,36 @@ def _check_template(data: object, where: str, errors: list[str]) -> None:
         if name not in KNOWN_PLACEHOLDERS:
             token = "{{" + name + "}}"
             errors.append(f"{where}: unknown placeholder {token}")
+
+
+def _check_prompt(data: object, where: str, errors: list[str]) -> None:
+    if not isinstance(data, dict):
+        errors.append(f"{where}: prompt file must be a JSON object")
+        return
+    for key in sorted(set(data) - PROMPT_KEYS):
+        errors.append(f"{where}: unknown field {key}")
+    for key in sorted(PROMPT_KEYS):
+        if key not in data:
+            errors.append(f"{where}: missing {key}")
+        else:
+            _check_text(data[key], f"{where}: {key}", errors)
+    for key in ("name", "description"):
+        if isinstance(data.get(key), str) and ("\n" in data[key] or "\r" in data[key]):
+            errors.append(f"{where}: {key} must be one line")
+    text = data.get("text")
+    if isinstance(text, str) and len(text.strip()) > PROMPT_TEXT_MAX:
+        errors.append(f"{where}: text is {len(text.strip())} characters, over the {PROMPT_TEXT_MAX} cap")
+    for key in ("name", "text"):
+        if isinstance(data.get(key), str) and _hidden(data[key]):
+            errors.append(f"{where}: {key} contains a character the reader cannot see")
+
+
+def _hidden(value: str) -> bool:
+    """Rampart's promptHidden: a format character, or a control other than newline, return or tab."""
+    return any(
+        unicodedata.category(ch) == "Cf" or (unicodedata.category(ch) == "Cc" and ch not in "\n\r\t")
+        for ch in value
+    )
 
 
 def _check_text(value: object, where: str, errors: list[str]) -> None:
